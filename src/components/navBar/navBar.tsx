@@ -149,7 +149,7 @@ const LinkUl = styled.ul<Toggleable>`
       margin-left: 0;
       font-size: var(--text-md);
       transform: ${({ toggle }) =>
-        toggle ? `translateY(var(--sizing-lg))` : `translateY(0)`};
+    toggle ? `translateY(var(--sizing-lg))` : `translateY(0)`};
       opacity: ${({ toggle }) => (toggle ? "1" : "0")};
     }
 
@@ -172,7 +172,7 @@ const LinkUl = styled.ul<Toggleable>`
   }
 `
 
-const NavBackground = styled(Background)<Toggleable>`
+const NavBackground = styled(Background) <Toggleable>`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     &::after {
       ${({ toggle }) => navBackgroundAnimationCSS(toggle)};

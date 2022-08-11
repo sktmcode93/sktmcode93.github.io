@@ -1,6 +1,6 @@
 # Hello
 
-Welcome to my blog. My name is Ed.<br>
-I'm very interested in the web front-end development.
+## 안녕하세요 프론트엔드 개발자 김성엽입니다.<br><br>
+저는 2021년 06월 14일부터 개발을 시작하였습니다. <br><br>
 
-Visit my [Github repository](https://github.com/sungik-choi/gatsby-starter-apple).
+

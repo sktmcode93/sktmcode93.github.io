@@ -1,35 +1,20 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-import type { Query } from "Types/GraphQL"
 import Layout from "Layouts/layout"
 import SEO from "Components/seo"
 import Markdown from "Styles/markdown"
 import { rhythm } from "Styles/typography"
 
 const About = () => {
-  const data = useStaticQuery<Query>(graphql`
-    query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
-        edges {
-          node {
-            html
-          }
-        }
-      }
-    }
-  `)
-
-  const markdown = data.allMarkdownRemark.edges[0].node.html
-
   return (
     <Layout>
       <SEO title="About" />
       <Container
-        dangerouslySetInnerHTML={{ __html: markdown ?? "" }}
         rhythm={rhythm}
-      ></Container>
+      >
+        대체 뭐야
+      </Container>
     </Layout>
   )
 }
@@ -67,3 +52,31 @@ const Container = styled(Markdown).attrs({
 `
 
 export default About
+
+
+
+
+// const data = useStaticQuery<Query>(graphql`
+//   //   query {
+//   //     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+//   //       edges {
+//   //         node {
+//   //           html
+//   //         }
+//   //       }
+//   //     }
+//   //   }
+//   // `)
+  // const markdown = data.allMarkdownRemark.edges[0].node.html
+
+  // return (
+  //   <Layout>
+  //     <SEO title="About" />
+  //     <Container
+  //       // dangerouslySetInnerHTML={{ __html: markdown ?? "" }}
+  //       rhythm={rhythm}
+  //     >
+  //       대체 뭐야
+  //     </Container>
+  //   </Layout>
+  // )
